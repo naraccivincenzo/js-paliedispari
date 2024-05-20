@@ -6,7 +6,7 @@ then reverse and join again, after that
 compare if they are equal at the original word
 then return true or false
 */
-function palindrome(word) {
+function isPalindrome(word) {
 
     if (word === word.split('').reverse().join('')) {
         return true
@@ -16,10 +16,10 @@ function palindrome(word) {
 }
 
 //init the prompt
-const word = prompt('Inserisci una parola per vedere se è palindroma');
+const word = prompt('Inserisci una parola per vedere se è palindroma').toUpperCase();
 
 //call the function and print the result
-if (palindrome(word) === true) {
+if (isPalindrome(word) === true) {
     console.log(`La parola inserita ${word} è palindroma`);
 } else {
     console.log(`La parola inserita ${word} non è palindroma`);
